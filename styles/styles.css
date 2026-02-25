@@ -985,3 +985,64 @@ section {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+/* Language toggle button (FR/EN) */
+.lang-btn {
+  top: 5%;
+  right: calc(3% + 85px);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+  z-index: 11;
+}
+.lang-btn:active {
+  transform: translateY(-3px);
+}
+.lang-btn .lang-label {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-grey-2);
+}
+
+/* Portfolio refonte */
+.portfolio-section-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.featured-portfolios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .featured-portfolios {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio-item .hover-items .project-desc {
+  text-align: center;
+  padding: 0 1.2rem;
+  color: var(--color-white);
+  opacity: 0.95;
+  margin-bottom: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.secondary-portfolios {
+  opacity: 0.75;
+}
+.secondary-portfolios .portfolio-item img {
+  filter: grayscale(30%);
+}
