@@ -1,281 +1,123 @@
-.about-container .left-about p{
-    padding-left: 0;
-}
+// Breakpoints are written from widest to narrowest so later rules win.
 
-@media screen and (max-width: 600px) {
-    header{
-        padding: 0 !important;
-    }
-    .theme-btn{
-        width: 50px;
-        height: 50px;
-    }
-    .header-content{
-        grid-template-columns: repeat(1, 1fr);
-        padding-bottom: 6rem;
-    }
-
-    .left-header{
-        .h-shape{
-            display: none;
-        }
-    }
-    .right-header{
-        grid-row: 1;
-        padding-right: 0rem !important;
-        width: 90%;
-        margin: 0 auto;
-        .name{
-            font-size: 2.5rem !important;
-            text-align: center;
-            padding-top: 3rem;
-        }
-    }
-    .header-content .left-header .image{
-        margin: 0 auto;
-        width: 90%;
-    }
-
-    .controls{
-        top: auto;
-        bottom: 0;
-        flex-direction: row;
-        justify-content: center;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        background-color: var(--color-grey-5);
-        .control{
-            margin: 1rem .3rem;
-        }
-    }
-
-    .about-container{
-        grid-template-columns: repeat(1, 1fr);
-        .right-about{
-            grid-template-columns: repeat(1, 1fr);
-            padding-top: 2.5rem;
-        }
-        .left-about{
-            padding-right: 0;
-            p{
-                padding-left: 0;
-            }
-        }
-    }
-
-    .timeline{
-        grid-template-columns: repeat(1, 1fr);
-        padding-bottom: 6rem;
-    }
-
-    .container{
-        padding: 2rem 2.5rem !important;
-    }
-
-    .about-stats{
-        .progress-bars{
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    .portfolios{
-        grid-template-columns: repeat(1, 1fr);
-        padding-bottom: 6rem;
-        margin-top: 1rem;
-    }
-
-    .blogs{
-        grid-template-columns: repeat(1, 1fr);
-        padding-bottom: 6rem;
-    }
-
-    .contact-content-con{
-        flex-direction: column;
-        .right-contact{
-            margin-left: 0;
-            margin-top: 2.5rem;
-        }
-        
-    }
-    .contact-content-con .right-contact .i-c-2{
-        flex-direction: column;
-    }
-    .contact-content-con .right-contact .i-c-2 :last-child{
-        margin-left: 0;
-        margin-top: 1.5rem;
-    }
-
-    .contact-content-con .right-contact{
-        margin-bottom: 6rem;
-    }
-
-    .contact-item{
-        flex-direction: column;
-        margin: 1rem 0;
-        p{
-            font-size: 15px;
-            color: var(--color-grey-2);
-        }
-        span{
-            font-size: 15px;
-        }
-        .icon{
-            grid-template-columns: 25px 1fr;
-        }
-    }
-
-
-    .main-title{
-        h2{
-            font-size: 2rem;
-            span{
-                font-size: 2.3rem;
-            }
-            .bg-text{
-                font-size: 2.3rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:1432px){
-    .container{
+@media screen and (max-width: 1432px) {
+    .container {
         padding: 7rem 11rem;
     }
-
-    .contact-content-con{
-        flex-direction: column;
-        .right-contact{
-            margin-left: 0;
-            margin-top: 2.5rem;
-        }
-        
+    .main-title h2 .bg-text {
+        font-size: 5.5rem;
     }
-    .contact-content-con .right-contact .i-c-2{
-        flex-direction: column;
-    }
-    .contact-content-con .right-contact .i-c-2 :last-child{
-        margin-left: 0;
-        margin-top: 1.5rem;
-    }
-
-    .contact-content-con .right-contact{
-        margin-bottom: 6rem;
-    }
-
-    .main-title{
-        h2{
-            .bg-text{
-                font-size: 5.5rem;
-            }
-        }
-    }
-    
 }
 
-
-
-
-@media screen and (max-width:1250px){
-    .blogs{
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 6rem;
-    }
-    .portfolios{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .header-content .right-header{
+@media screen and (max-width: 1250px) {
+    .header-content .right-header {
         padding-right: 9rem;
     }
-
-}
-@media screen and (max-width:660px){
-    .blogs{
-        grid-template-columns: repeat(1, 1fr);
+    .projects.secondary {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .portfolios{
-        grid-template-columns: repeat(1, 1fr);
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width:1070px){
-    .about-container{
-        grid-template-columns: repeat(1, 1fr);
-        .right-about{
-            padding-top: 2.5rem;
-        }
+@media screen and (max-width: 1070px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        .left-about { padding-right: 0; }
+        .right-about { padding-top: 2rem; }
     }
-    .main-title{
-        h2{
-            font-size: 4rem;
-            span{
-                font-size: 4rem;
-            }
-            .bg-text{
-                font-size: 4.5rem;
-            }
-        }
+    .timeline,
+    .skill-groups,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    .main-title h2 {
+        font-size: 3.4rem;
+        .bg-text { font-size: 4.5rem; }
     }
 }
 
-@media screen and (max-width:970px){
-    .container{
+@media screen and (max-width: 970px) {
+    .container {
         padding: 7rem 6rem;
     }
-    .about-container .left-about{
-        padding-right: 0rem;
-    }
-    .header-content{
-        grid-template-columns: repeat(1, 1fr);
+    .header-content {
+        grid-template-columns: 1fr;
         padding-bottom: 6rem;
-    }
-
-    .left-header{
-        .h-shape{
-            display: none;
+        .left-header {
+            .h-shape { display: none; }
+            .image {
+                width: 90%;
+                height: 60vh;
+                margin: 0 auto;
+            }
         }
-        .image{
-            width: 90% !important;
-            margin: 0 auto !important;
-            
-        }
-    }
-    .right-header{
-        grid-row: 1;
-        padding-right: 0rem !important;
-        width: 90%;
-        margin: 0 auto;
-        .name{
-            font-size: 2.5rem !important;
+        .right-header {
+            grid-row: 1;
+            padding: 7rem 0 2rem;
+            width: 90%;
+            margin: 0 auto;
+            align-items: center;
             text-align: center;
-            padding-top: 3rem;
+            .name { font-size: 2.5rem; }
+            .btn-con { align-self: center; justify-content: center; }
         }
+    }
+    .header-badges {
+        justify-content: center;
     }
 }
-@media screen and (max-width:700px){
-    .container{
-        padding: 7rem 3rem;
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 6rem 1.5rem 8rem !important;
     }
-    .about-stats .progress-bars{
-        grid-template-columns: repeat(1, 1fr);
+    header.container {
+        padding: 0 !important;
     }
-    .about-container .right-about{
-        grid-template-columns: repeat(1, 1fr);
+    .theme-btn,
+    .lang-btn {
+        top: 1rem;
+        width: 46px;
+        height: 46px;
+    }
+    .theme-btn { right: 1rem; }
+    .lang-btn { right: calc(1rem + 56px); }
+
+    // Navigation moves to a bottom bar
+    .controls {
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 0;
+        transform: none;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0 .5rem;
+        background-color: var(--color-grey-5);
+        .control {
+            width: 46px;
+            height: 46px;
+            margin: .6rem .2rem;
+            .control-label { display: none; }
+        }
     }
 
-    .timeline{
-        grid-template-columns: repeat(1, 1fr);
+    .about-container .right-about,
+    .projects.secondary,
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
-    .main-title{
-        h2{
-            font-size: 3rem;
-            span{
-                font-size: 3rem;
-            }
-            .bg-text{
-                font-size: 4rem;
-            }
-        }
+    .timeline .timeline-item {
+        padding-left: 2.2rem;
+    }
+    .stat-title {
+        font-size: 1.15rem;
+    }
+    .main-title h2 {
+        font-size: 2.2rem;
+        .bg-text { font-size: 2.8rem; }
     }
 }

@@ -2,661 +2,488 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Rémi Lamat — Élève ingénieur en informatique</title>
+    <meta name="description" content="Portfolio de Rémi Lamat, élève ingénieur en 3e année à l'ENSEIRB-MATMECA (Réseaux et Informatique) et apprenti ingénieur logiciel au CEA.">
+    <meta property="og:title" content="Rémi Lamat — Portfolio">
+    <meta property="og:description" content="Élève ingénieur à l'ENSEIRB-MATMECA, apprenti ingénieur logiciel au CEA.">
+    <meta property="og:image" content="img/lamat_remi_photo.JPG">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body class="main-content">
+    <!-- ========== ACCUEIL ========== -->
     <header class="container header active" id="home">
         <div class="header-content">
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                    <!--Photo de profil 408*612-->
-                    <img src="img/lamat_remi_photo.JPG" alt="">
+                    <img src="img/lamat_remi_photo.JPG" alt="Portrait de Rémi Lamat" width="2316" height="1300">
                 </div>
             </div>
             <div class="right-header">
-                <h1 class="name">
-                    <span>LAMAT Rémi</span>
-                    <br><span data-i18n="job_title">Étudiant Ingénieur/Développeur Informatique</span>
-                </h1>
-                <p>
-                    <span data-i18n="header_intro">Étudiant ingénieur à l'ENSEIRB MATMECA de Bordeaux. Actuellement en alternance au CEA en tant qu'ingénieur dans le cadre de la jouvance du Control Commande du Laser Mégajoule.</span>
-                </p>
+                <h1 class="name">Rémi <span>LAMAT</span></h1>
+                <p class="role" data-i18n="job_title">Élève ingénieur en informatique · Apprenti ingénieur logiciel</p>
+                <p class="intro" data-i18n="header_intro">Élève ingénieur en 3<sup>e</sup> année à l'ENSEIRB-MATMECA (Bordeaux INP), filière Réseaux et Informatique par apprentissage. Au CEA, je participe à la modernisation du système de contrôle-commande du Laser Mégajoule.</p>
+                <ul class="header-badges">
+                    <li><i class="fas fa-graduation-cap"></i><span data-i18n="badge_school">ENSEIRB-MATMECA · diplôme 2027</span></li>
+                    <li><i class="fas fa-atom"></i><span data-i18n="badge_cea">CEA · Laser Mégajoule</span></li>
+                    <li><i class="fas fa-language"></i><span data-i18n="badge_lang">Français · Anglais · Espagnol</span></li>
+                </ul>
                 <div class="btn-con">
-                    <a href="pdf/LAMAT_Remi_CV.pdf" class="main-btn cv-download">
-                        <span class="btn-text" data-i18n="download_cv">Download CV</span>
+                    <a href="pdf/LAMAT_Remi_CV.pdf" class="main-btn cv-download" target="_blank" rel="noopener">
+                        <span class="btn-text" data-i18n="download_cv">Télécharger le CV</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                    <a href="#contact" class="main-btn ghost" data-goto="contact">
+                        <span class="btn-text" data-i18n="contact_me">Me contacter</span>
+                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <main>
 
+    <main>
+        <!-- ========== EXPÉRIENCES ========== -->
         <section class="container work" id="work">
             <div class="main-title">
-                <h2><span data-i18n="work_title">Experiences</span><span class="bg-text" data-i18n="work_bg">professionnelles</span></h2>
+                <h2><span data-i18n="work_title_a">Expériences</span> <span class="accent" data-i18n="work_title_b">pro</span><span class="bg-text" data-i18n="work_bg">Carrière</span></h2>
             </div>
             <div class="about-container">
                 <div class="left-about">
-                    <h4 data-i18n="work_h4">Experiences professionnelles</h4>
-                    <p>
-                        <span data-i18n="work_p">Lors de mon parcours, j'ai eu l'occasion de gagner en experience professionnelle. J'ai effectué plusieurs alternances et stages que vous pourrez retrouver ci-dessous.</span>
-                    </p>
+                    <h4 data-i18n="work_h4">Mon parcours en entreprise</h4>
+                    <p data-i18n="work_p">Trois années d'alternance, dans la banque puis dans la recherche scientifique, et deux stages, dont un à l'étranger, m'ont permis de travailler sur des systèmes en production, au sein d'équipes agiles comme dans des environnements à fortes exigences de fiabilité. En parallèle, je suis auto-entrepreneur et j'ai co-fondé la SARL Xenalis.</p>
                     <div class="btn-con">
-                        <a href="pdf/LAMAT_Remi_CV.pdf" class="main-btn cv-download">
-                            <span class="btn-text" data-i18n="download_cv">Download CV</span>
+                        <a href="pdf/LAMAT_Remi_CV.pdf" class="main-btn cv-download" target="_blank" rel="noopener">
+                            <span class="btn-text" data-i18n="download_cv">Télécharger le CV</span>
                             <span class="btn-icon"><i class="fas fa-download"></i></span>
                         </a>
                     </div>
                 </div>
                 <div class="right-about">
                     <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text" data-i18n="work_summary_apprenticeship">2 ans d'alternance</p>
-                            <p class="small-text"><br /><span data-i18n="work_summary_company_cea">CEA</span></p>
-                            <p class="small-text"><br /><span data-i18n="work_summary_company_lbp">La Banque Postale</span></p>
-                        </div>
+                        <p class="large-text" data-i18n="work_fact1_value">3 ans</p>
+                        <p class="small-text" data-i18n="work_fact1_label">d'alternance</p>
                     </div>
                     <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text" data-i18n="work_summary_internship">3 mois de stage</p>
-                            <p class="small-text"><br /><span data-i18n="work_summary_company_lbp">La Banque Postale</span></p>
-                        </div>
+                        <p class="large-text" data-i18n="work_fact2_value">2 stages</p>
+                        <p class="small-text" data-i18n="work_fact2_label">France · Italie</p>
+                    </div>
+                    <div class="about-item">
+                        <p class="large-text">CEA</p>
+                        <p class="small-text" data-i18n="work_fact3_label">Recherche scientifique</p>
+                    </div>
+                    <div class="about-item">
+                        <p class="large-text">LBP</p>
+                        <p class="small-text" data-i18n="work_fact4_label">Banque &amp; assurance</p>
                     </div>
                 </div>
             </div>
-            <h4 class="stat-title" data-i18n="timeline_title">Ma Timeline</h4>
+
+            <h4 class="stat-title" data-i18n="work_tl_title">Expériences professionnelles</h4>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="work_tl1_duration">septembre 2024 - septembre 2027</p>
-                    <h5 data-i18n-html="work_tl1_title">Alternant<span> - CEA</span></h5>
-                    <p>
-                        <span data-i18n="work_tl1_desc">Ingénieur/Développeur au CEA. Chargé de la jouvance d'une partie du Control Commande du Laser Mégajoule.</span>
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-atom"></i></div>
+                    <p class="tl-duration" data-i18n="work_tl1_duration">Sept. 2024 – sept. 2027</p>
+                    <h5><span data-i18n="work_tl1_title">Apprenti ingénieur logiciel</span><span class="tl-org"> · CEA</span></h5>
+                    <p data-i18n="work_tl1_desc">Modernisation (jouvance) d'une partie du système de contrôle-commande du Laser Mégajoule, une installation de recherche aux exigences élevées en matière de fiabilité et de qualité logicielle.</p>
+                </div>
+                <!-- TODO : compléter le stage en Italie (dates exactes, entreprise, missions, technologies) -->
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-globe-europe"></i></div>
+                    <p class="tl-duration" data-i18n="work_tl2_duration">Été 2026 · 3 mois</p>
+                    <h5><span data-i18n="work_tl2_title">Stagiaire</span><span class="tl-org" data-i18n="work_tl2_org"> · Terranova da Sibari, Italie</span></h5>
+                    <p data-i18n="work_tl2_desc">Stage de trois mois à l'étranger, dans le sud de l'Italie.</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="work_tl2_duration">août 2023 - août 2024</p>
-                    <h5 data-i18n-html="work_tl2_title">Alternant<span> - La Banque Postale</span></h5>
-                    <p>
-                        <span data-i18n="work_tl2_desc">Tavail à la Banque Postale pour la DSIBA (Direction des Systèmes d'Information Banque et Assurance) en tant que
-                        développeur informatique dans l'équipe Tool. J'ai notamment codé en PhP des applications destinées aux différents collaborateurs. 
-                        Les projets étaient gérés de manière agile. Mon équipe était chargé de l'évolution et la maintenance de 3 applications.</span>
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
+                    <p class="tl-duration" data-i18n="work_tl3_duration">Août 2023 – juil. 2024</p>
+                    <h5><span data-i18n="work_tl3_title">Apprenti développeur</span><span class="tl-org"> · La Banque Postale</span></h5>
+                    <p data-i18n="work_tl3_desc">Développeur back-end dans l'équipe Tool de la DSIBA (Direction des Systèmes d'Information Banque et Assurance). Développement en PHP d'applications internes ; évolution et maintenance de trois applications en méthode agile (daily meetings, sprint reviews).</p>
+                    <ul class="tags">
+                        <li>PHP</li><li>SQL</li><li>HeidiSQL</li><li>Git</li><li>Agile</li>
+                    </ul>
                 </div>
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="work_tl3_duration">avril 2023 - juin 2023</p>
-                    <h5 data-i18n-html="work_tl3_title">Stagiaire<span> - La Banque Postale</span></h5>
-                    <p>
-                        <span data-i18n="work_tl3_desc">Développeur python dans l'équipe HELP de la DSIBA (Direction des Systèmes d'Information Banque et Assurance), j'étais chargé d'aider à la cartographie du SI de La Banque Postale. Pour se faire j'ai utilisé un ETL
-                        (Extract, Transform, Load) pour récupérer les données et les traiter.</span>
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
+                    <p class="tl-duration" data-i18n="work_tl4_duration">Avr. – juin 2023</p>
+                    <h5><span data-i18n="work_tl4_title">Stagiaire développeur Python</span><span class="tl-org"> · La Banque Postale</span></h5>
+                    <p data-i18n="work_tl4_desc">Équipe HELP de la DSIBA : contribution à la cartographie du système d'information de la banque, à l'aide d'un ETL (Extract, Transform, Load) pour collecter et traiter les données.</p>
+                    <ul class="tags">
+                        <li>Python</li><li>ETL</li><li>SQL</li>
+                    </ul>
                 </div>
             </div>
-            <div class="about-stats">
-                <h4 class="stat-title" data-i18n="work_lang_title">Les langages utilisés :</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">PhP</p>
-                       
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                       
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">SQL</p>
-                        
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Bash</p>
-                        
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">C#</p>
-                        
-                    </div>
+
+            <!-- TODO : compléter (site de Xenalis, dates, activité d'auto-entrepreneur) -->
+            <h4 class="stat-title" data-i18n="entre_title">Entrepreneuriat</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-store"></i></div>
+                    <p class="tl-duration" data-i18n="entre1_duration">En cours</p>
+                    <h5><span data-i18n="entre1_title">Co-fondateur &amp; associé</span><span class="tl-org" data-i18n="entre1_org"> · Xenalis</span></h5>
+                    <p data-i18n="entre1_desc">Création, avec mon frère, de Xenalis, une SARL qui développe une boutique de vente et d'information sur les produits Pokémon. Son positionnement : lutter contre le scalping (achat massif de produits pour les revendre au prix fort) afin que collectionneurs et joueurs puissent acheter au juste prix.</p>
+                    <ul class="tags">
+                        <li data-i18n="tag_ecommerce">E-commerce</li><li data-i18n="tag_creation">Création d'entreprise</li><li data-i18n="tag_management">Gestion</li>
+                    </ul>
                 </div>
-                <h4 class="stat-title" data-i18n="work_tech_title">Les technologies utilisées :</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">Git</p>
-                       
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Visual Studio Code</p>
-                       
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">HeidiSQL</p>
-                        
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Artifactory</p>
-                        
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Red Hat</p>
-                        
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Docker</p>
-                        
-                    </div>
-                </div>        
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-user-tie"></i></div>
+                    <p class="tl-duration" data-i18n="entre2_duration">En cours</p>
+                    <h5><span data-i18n="entre2_title">Auto-entrepreneur</span></h5>
+                    <p data-i18n="entre2_desc">Activité indépendante menée en parallèle de mes études et de mon alternance.</p>
+                </div>
             </div>
+
+            <h4 class="stat-title" data-i18n="work_tech_title">Environnement technique en entreprise</h4>
+            <ul class="chips centered">
+                <li>PHP</li><li>Python</li><li>C#</li><li>SQL</li><li>Bash</li>
+                <li>Git</li><li>Docker</li><li>Red Hat Linux</li><li>Artifactory</li><li>HeidiSQL</li><li>VS Code</li>
+            </ul>
         </section>
 
-
-
+        <!-- ========== FORMATION & COMPÉTENCES ========== -->
         <section class="container about" id="about">
             <div class="main-title">
-                <h2><span data-i18n="about_title">Personnelles</span><span class="bg-text" data-i18n="about_bg">informations</span></h2>
+                <h2><span data-i18n="about_title_a">À</span> <span class="accent" data-i18n="about_title_b">propos</span><span class="bg-text" data-i18n="about_bg">Profil</span></h2>
             </div>
             <div class="about-container">
                 <div class="left-about">
-                    <h4 data-i18n="about_h4">Informations personnelles</h4>
-                    <p>
-                        <span data-i18n="about_p">Passionné par l’informatique et notamment le développement, polyvalent, à l’écoute et motivé, j’ai l’habitude du travail en mode projet et par équipe. Je recherche un stage de 3 mois à l'étranger pendant la période Juin/Juillet/Août.</span>
-                    </p>
+                    <h4 data-i18n="about_h4">Qui suis-je ?</h4>
+                    <p data-i18n="about_p">Passionné de développement logiciel, polyvalent et à l'écoute, j'ai l'habitude de travailler en équipe et en mode projet. En dehors des cours, j'entraîne de jeunes joueurs de tennis et je préside Chesseirb, l'association d'échecs de l'ENSEIRB-MATMECA, que j'ai co-fondée.</p>
                     <div class="btn-con">
-                        <a href="pdf/LAMAT_Remi_CV.pdf" class="main-btn cv-download">
-                            <span class="btn-text" data-i18n="download_cv">Download CV</span>
+                        <a href="pdf/LAMAT_Remi_CV.pdf" class="main-btn cv-download" target="_blank" rel="noopener">
+                            <span class="btn-text" data-i18n="download_cv">Télécharger le CV</span>
                             <span class="btn-icon"><i class="fas fa-download"></i></span>
                         </a>
                     </div>
                 </div>
                 <div class="right-about">
                     <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">+10</p>
-                            <p class="small-text" data-i18n-html="about_metric_projects">Projets <br /> Complétés</p>
-                        </div>
+                        <p class="large-text">2027</p>
+                        <p class="small-text" data-i18n="about_fact1">Diplôme d'ingénieur</p>
                     </div>
                     <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">3</p>
-                            <p class="small-text" data-i18n-html="about_metric_years_exp"> Années<br /> d'experience</p>
-                        </div>
+                        <p class="large-text" data-i18n="about_fact2_value">3 langues</p>
+                        <p class="small-text" data-i18n="about_fact2_label">FR · EN (B2) · ES (B1)</p>
                     </div>
                     <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">+10</p>
-                            <p class="small-text" data-i18n-html="about_metric_tennis">Années <br /> de tennis</p>
-                        </div>
+                        <p class="large-text">15/3</p>
+                        <p class="small-text" data-i18n="about_fact3">Classement tennis</p>
                     </div>
                     <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">100%</p>
-                            <p class="small-text" data-i18n-html="about_metric_motivation">Motivation <br /> Détermination</p>
-                        </div>
+                        <p class="large-text">Chesseirb</p>
+                        <p class="small-text" data-i18n="about_fact4">Président &amp; co-fondateur</p>
                     </div>
                 </div>
             </div>
-            <h4 class="stat-title" data-i18n="timeline_title">Ma Timeline</h4>
+
+            <h4 class="stat-title" data-i18n="edu_title">Formation</h4>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="about_tl1_duration">2021 - present</p>
-                    <h5 data-i18n-html="about_tl1_title">Étudiant<span> - ENSEIRB MATMECA</span></h5>
-                    <p>
-                        <span data-i18n="about_tl1_desc">Diplôme d'ingénieur dans la filière R&I (Réseau et Informatique). 
-                        Apprentissage du réseau, de l'informatique et de tout le nécéssaire à un ingénieur de ce domaine (mathématiques, physiques, management ...).</span>
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <p class="tl-duration" data-i18n="edu1_duration">2024 – 2027</p>
+                    <h5><span data-i18n="edu1_title">Diplôme d'ingénieur</span><span class="tl-org"> · ENSEIRB-MATMECA</span></h5>
+                    <p data-i18n="edu1_desc">Bordeaux INP, filière Réseaux et Informatique (R&amp;I) par apprentissage, actuellement en 3<sup>e</sup> année. Génie logiciel, réseaux, systèmes, ainsi que mathématiques et management.</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="about_tl2_duration">2021 - 2024</p>
-                    <h5 data-i18n-html="about_tl2_title">Étudiant<span> - BUT Informatique</span></h5>
-                    <p>
-                        <span data-i18n="about_tl2_desc">Aprentissage des langages de programmation et des bases de données comme Java, C#, C, Python, SQL, HTML, CSS, PHP, bash.
-                        Travail en groupe sur des projets avec Git et GitHub combiné aux methodes agiles.</span>
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <p class="tl-duration">2021 – 2024</p>
+                    <h5><span data-i18n="edu2_title">BUT Informatique</span><span class="tl-org"> · IUT de Bordeaux</span></h5>
+                    <p data-i18n="edu2_desc">Programmation (Java, C, C#, Python, PHP), bases de données, développement web et Bash. Projets en équipe avec Git/GitHub et méthodes agiles. Troisième année en alternance.</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="about_tl3_duration">2018 - 2021</p>
-                    <h5 data-i18n-html="about_tl3_title">Étudiant<span> - Lycée</span></h5>
-                    <p>
-                        <span data-i18n="about_tl3_desc">Bac mention bien en spécialité Maths, phisique chimie et numérique et sciences de l'informatique (non conservé en terminal).
-                        Euro espagnol.</span>
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="about_tl4_duration">2014 - 2018</p>
-                    <h5 data-i18n-html="about_tl4_title">Étudiant<span> - Collège</span></h5>
-                    <p>
-                        <span data-i18n="about_tl4_desc">Stage d'observation au Laboratoire des pratiques innovantes en Design (LID).
-                        Creation de jeux vidéos avec Scratch.
-                        Création d'un site web avec WordPress.
-                        2ème régional du concours de maths Alkindie.</span>
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration" data-i18n="about_tl5_duration">2019 - 2022</p>
-                    <h5 data-i18n-html="about_tl5_title">Initiateur fédéral<span> - SPUC tennis</span></h5>
-                    <p>
-                        <span data-i18n="about_tl5_desc">Diplome d'initiateur fédéral de tennis et de pré-iniateur de tennis.
-                        Entraineur de jeunes de 6 à 18 ans au SPUC tennis.
-                        Organisation et encadrement bénévole d'animation pour le club.</span>
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-school"></i></div>
+                    <p class="tl-duration">2018 – 2021</p>
+                    <h5><span data-i18n="edu3_title">Baccalauréat général, mention Bien</span><span class="tl-org"> · Lycée Pape Clément</span></h5>
+                    <p data-i18n="edu3_desc">Spécialités mathématiques et physique-chimie, option mathématiques expertes. Section européenne espagnol.</p>
                 </div>
             </div>
-            <div class="about-stats">
-                <h4 class="stat-title" data-i18n="about_skills_title">Mes compétences</h4>
-                <div class="progress-bars"> 
 
-                    <div class="progress-bar">
-                        <p class="prog-title">java</p>                        
-                    </div>
+            <h4 class="stat-title" data-i18n="engage_title">Engagements</h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-chess-knight"></i></div>
+                    <p class="tl-duration" data-i18n="engage1_duration">Association étudiante</p>
+                    <h5><span data-i18n="engage1_title">Président &amp; co-fondateur</span><span class="tl-org"> · Chesseirb</span></h5>
+                    <p data-i18n="engage1_desc">Création et gestion de l'association d'échecs de l'ENSEIRB-MATMECA : organisation d'événements, animation de la communauté et développement du site web.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-icon"><svg class="tennis-ball" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4.9 4.9a10 10 0 0 1 0 14.2M19.1 4.9a10 10 0 0 0 0 14.2" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                    <p class="tl-duration" data-i18n="engage2_duration">Depuis 2019</p>
+                    <h5><span data-i18n="engage2_title">Entraîneur de tennis</span><span class="tl-org"> · SPUC Tennis, Pessac</span></h5>
+                    <p data-i18n="engage2_desc">Initiateur fédéral (2020). Encadrement de jeunes de 6 à 18 ans, organisation des séances et participation bénévole aux événements du club.</p>
+                </div>
+            </div>
 
-                    <div class="progress-bar">
-                        <p class="prog-title">C</p>                      
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">SQL</p>                        
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>   
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">C#</p>
-                    </div>
-                    
-                    <div class="progress-bar">
-                        <p class="prog-title">PHP</p>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Symfony</p>  
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">TCP/IP</p>  
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Méthodologies agiles</p>  
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">html5</p>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">css3</p>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Management</p>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Analyse fonctionnelle</p>
-                    </div>
-
+            <h4 class="stat-title" data-i18n="skills_title">Compétences</h4>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <h5><i class="fas fa-code"></i><span data-i18n="skills_lang">Langages</span></h5>
+                    <ul class="chips">
+                        <li>Python</li><li>Java</li><li>C</li><li>C#</li><li>PHP</li><li>SQL</li><li>Bash</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h5><i class="fas fa-globe"></i><span data-i18n="skills_web">Web</span></h5>
+                    <ul class="chips">
+                        <li>HTML</li><li>CSS</li><li>Symfony</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h5><i class="fas fa-tools"></i><span data-i18n="skills_tools">Outils &amp; DevOps</span></h5>
+                    <ul class="chips">
+                        <li>Git</li><li>GitHub</li><li>GitLab</li><li>Docker</li><li>Linux</li><li>Maven</li><li>JUnit</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h5><i class="fas fa-network-wired"></i><span data-i18n="skills_net">Réseaux</span></h5>
+                    <ul class="chips">
+                        <li>TCP/IP</li><li>DNS</li><li>DHCP</li><li data-i18n="skills_routing">Routage</li><li data-i18n="skills_ssh">Tunnels SSH</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h5><i class="fas fa-project-diagram"></i><span data-i18n="skills_methods">Méthodes</span></h5>
+                    <ul class="chips">
+                        <li data-i18n="skills_agile">Agile / Scrum</li><li>Design patterns</li><li data-i18n="skills_tests">Tests &amp; analyse statique</li><li data-i18n="skills_fa">Analyse fonctionnelle</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h5><i class="fas fa-language"></i><span data-i18n="skills_languages">Langues</span></h5>
+                    <ul class="chips">
+                        <li data-i18n="lang_fr">Français · natif</li><li data-i18n="lang_en">Anglais · B2</li><li data-i18n="lang_es">Espagnol · B1</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        
+        <!-- ========== PROJETS ========== -->
         <section class="container" id="portfolio">
             <div class="main-title">
-                <h2><span data-i18n="portfolio_title_prefix">Mon </span><span data-i18n="portfolio_title_span">Portfolio</span><span class="bg-text" data-i18n="portfolio_bg">My Work</span></h2>
+                <h2><span data-i18n="portfolio_title_a">Mes</span> <span class="accent" data-i18n="portfolio_title_b">projets</span><span class="bg-text">Portfolio</span></h2>
             </div>
-            <p class="port-text" data-i18n="portfolio_p">
-                Ici vous trouverez mes principaux projets personnels, ainsi que quelques projets académiques plus anciens.
-            </p>
+            <p class="port-text" data-i18n="portfolio_p">Une sélection de projets personnels, suivie de projets académiques réalisés à l'IUT.</p>
 
-            <h4 class="stat-title portfolio-section-title" data-i18n="featured_title">Projets personnels (mise en avant)</h4>
-            <div class="featured-portfolios portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <a href="https://crypto-ascend.fr/" target="_blank" rel="noopener noreferrer">
-                            <img src="img/crypto_ascend_logo.png" alt="Crypto Ascend">
-                        </a>
-                    </div>
-                    <div class="hover-items">
-                        <h3 data-i18n="fp1_title">Bot de trading de crypto-monnaies</h3>
-                        <p class="project-desc" data-i18n="fp1_desc">Bot et interface pour automatiser des stratégies de trading. Projet personnel (Crypto Ascend).</p>
-                        <div class="icons">
-                            <a href="https://crypto-ascend.fr/" target="_blank" rel="noopener noreferrer" class="icon" title="Live">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/rlamat/bot_crypto" target="_blank" rel="noopener noreferrer" class="icon" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+            <h4 class="stat-title" data-i18n="featured_title">Projets personnels</h4>
+            <div class="projects featured">
+                <article class="project-card">
+                    <a class="project-image logo" href="https://crypto-ascend.fr/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/crypto_ascend_logo.webp" alt="Logo Crypto Ascend" loading="lazy">
+                    </a>
+                    <div class="project-body">
+                        <h3 data-i18n="fp1_title">Crypto Ascend — bot de trading</h3>
+                        <p data-i18n="fp1_desc">Bot et interface web permettant d'automatiser des stratégies de trading de crypto-monnaies.</p>
+                        <div class="project-links">
+                            <a href="https://crypto-ascend.fr/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span data-i18n="link_site">Site</span></a>
+                            <a href="https://github.com/rlamat/bot_crypto" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="image">
-                        <a href="https://chesseirb.duckdns.org/" target="_blank" rel="noopener noreferrer">
-                            <img src="img/chesseirb_logo.png" alt="Chesseirb">
-                        </a>
-                    </div>
-                    <div class="hover-items">
-                        <h3 data-i18n="fp2_title">Site de l'association d'échecs (ENSEIRB)</h3>
-                        <p class="project-desc" data-i18n="fp2_desc">Site vitrine + infos club. Président et co-fondateur de l'association.</p>
-                        <div class="icons">
-                            <a href="https://chesseirb.duckdns.org/" target="_blank" rel="noopener noreferrer" class="icon" title="Live">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/rlamat/Chesseirb" target="_blank" rel="noopener noreferrer" class="icon" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <a class="project-image logo" href="https://chesseirb.duckdns.org/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/chesseirb_logo.webp" alt="Logo Chesseirb" loading="lazy">
+                    </a>
+                    <div class="project-body">
+                        <h3 data-i18n="fp2_title">Chesseirb — site de l'association</h3>
+                        <p data-i18n="fp2_desc">Site de l'association d'échecs de l'ENSEIRB-MATMECA : présentation du club, événements et informations pratiques.</p>
+                        <div class="project-links">
+                            <a href="https://chesseirb.duckdns.org/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span data-i18n="link_site">Site</span></a>
+                            <a href="https://github.com/rlamat/Chesseirb" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/featured_lgstats.svg" alt="LG Stats">
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/featured_lgstats.svg" alt="Illustration LG Stats" loading="lazy">
                     </div>
-                    <div class="hover-items">
-                        <h3 data-i18n="fp3_title">Stats Loup-Garou UHC (Minecraft)</h3>
-                        <p class="project-desc" data-i18n="fp3_desc">Visualisation de statistiques de parties et suivi des performances.</p>
-                        <div class="icons">
-                            <a href="https://github.com/rlamat/lg_stats" target="_blank" rel="noopener noreferrer" class="icon" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-body">
+                        <h3 data-i18n="fp3_title">LG Stats — Loup-Garou UHC</h3>
+                        <p data-i18n="fp3_desc">Visualisation des statistiques de parties Minecraft et suivi des performances des joueurs.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/rlamat/lg_stats" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/featured_wrapperai.svg" alt="WrapperAI">
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/featured_wrapperai.svg" alt="Illustration WrapperAI" loading="lazy">
                     </div>
-                    <div class="hover-items">
-                        <h3 data-i18n="fp4_title">Génération de posts à partir d'une vidéo</h3>
-                        <p class="project-desc" data-i18n="fp4_desc">Outil pour générer automatiquement des posts pour les réseaux sociaux depuis une vidéo.</p>
-                        <div class="icons">
-                            <a href="https://github.com/estelleeat/WrapperAI" target="_blank" rel="noopener noreferrer" class="icon" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-body">
+                        <h3 data-i18n="fp4_title">WrapperAI — posts à partir d'une vidéo</h3>
+                        <p data-i18n="fp4_desc">Outil qui génère automatiquement des publications pour les réseaux sociaux à partir d'une vidéo.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/estelleeat/WrapperAI" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>GitHub</a>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <h4 class="stat-title portfolio-section-title" data-i18n="older_title">Autres projets (second plan)</h4>
-            <div class="portfolios secondary-portfolios">
-<div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/rsa.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_RSA.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_RSA.zip"> Project Source </a>
-                        </h3>
-                        <div class="icons">
-                                <form method="get" action="pdf/retexRSA.pdf"></form>
-                                <a href="pdf/LAMAT_Remi_RSA.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+            <h4 class="stat-title" data-i18n="older_title">Projets académiques (IUT)</h4>
+            <div class="projects secondary">
+                <article class="project-card">
+                    <div class="project-image"><img src="img/rsa.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_rsa_title">Chiffrement RSA</h3>
+                        <p data-i18n="ap_rsa_desc">Simulation d'un échange de messages chiffrés avec RSA.</p>
+                        <ul class="tags"><li>Python</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_RSA.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_RSA.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/pong.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_Pong.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_Pong.zip"> Project Source </a>
-                        </h3>
-                        <div class="icons">
-                                <form method="get" action="pdf/retexPong.pdf"></form>
-                                <a href="pdf/LAMAT_Remi_Rendu_Pong.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/lowatem.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_lowatem_title">Lowatem — IA de jeu</h3>
+                        <p data-i18n="ap_lowatem_desc">Implémentation des règles d'un jeu de plateau, tests unitaires, puis conception et optimisation d'une IA.</p>
+                        <ul class="tags"><li>Java</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Lowatem.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_Lowatem.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/lowatem.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_Lowatem.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_Lowatem.zip"> Project Source </a>
-                        </h3>                        <div class="icons">
-                            <form method="get" action="pdf/retexLowatem.pdf"></form>
-                            <a href="pdf/LAMAT_Remi_Lowatem.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/woodeo.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3>Woodeo</h3>
+                        <p data-i18n="ap_woodeo_desc">Application web de suivi de séries et d'animés, réalisée en équipe.</p>
+                        <ul class="tags"><li>Web</li></ul>
+                        <div class="project-links">
+                            <a href="https://woodeo.valentinraillard.fr/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i><span data-i18n="link_site">Site</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/jpo.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_Atelier_Processing.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_Atelier_Processing.zip"> Project Source </a>
-                        </h3>                        <div class="icons">
-                            <form method="get" action="pdf/retexJPO.pdf"></form>
-                            <a href="pdf/LAMAT_Remi_Rendu_JPO.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/pong.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3>Pong</h3>
+                        <p data-i18n="ap_pong_desc">Reproduction du jeu Pong : menus, pause, gestion du score et mode multi-balles.</p>
+                        <ul class="tags"><li>Processing</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Rendu_Pong.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_Pong.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/installation-poste.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_InstallationPoste.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_InstallationPoste.zip"> Project Source </a>
-                        </h3>                        <div class="icons">
-                            <form method="get" action="pdf/retexInstallationPoste.pdf"></form>
-                            <a href="pdf/LAMAT_Remi_Installation_Poste.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/jpo.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_jpo_title">Atelier Processing (JPO)</h3>
+                        <p data-i18n="ap_jpo_desc">Jeu à compléter et TD guidé pour initier les visiteurs des portes ouvertes à la programmation.</p>
+                        <ul class="tags"><li>Processing</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Rendu_JPO.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_Atelier_Processing.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/gestion-entreprise.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_Gestion_Entreprise.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_Gestion_Entreprise.zip"> Project Source </a>
-                        </h3>                        <div class="icons">
-                            <form method="get" action="pdf/retexGestionEntreprise.pdf"></form>
-                            <a href="pdf/LAMAT_Remi_Gestion.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/bd.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_bd_title">Base de données</h3>
+                        <p data-i18n="ap_bd_desc">Modélisation d'une base, script de peuplement et requêtes SQL répondant à un cahier des charges.</p>
+                        <ul class="tags"><li>SQL</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Base_De_Donees.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_Base_De_Donnees.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/bd.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_Base_De_Donnees.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_Base_De_Donnees.zip"> Project Source </a>
-                        </h3>                        <div class="icons">
-                            <form method="get" action="pdf/retexBD.pdf"></form>
-                            <a href="pdf/LAMAT_Remi_Base_De_Donees.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/web.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_web_title">Site web vitrine</h3>
+                        <p data-i18n="ap_web_desc">Persona, maquette puis intégration responsive en HTML/CSS, sans JavaScript.</p>
+                        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Web.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_Web.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/web.PNG" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>
-                            <form method="get" action="zip/LAMAT_Remi_Web.zip"></form>
-                            <a class="txtURL" href="zip/LAMAT_Remi_Web.zip"> Project Source </a>
-                        </h3>                        <div class="icons">
-                            <form method="get" action="pdf/retexWeb.pdf"></form>
-                            <a href="pdf/LAMAT_Remi_Web.pdf" class="main-btn">
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/installation-poste.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_install_title">Installation de postes</h3>
+                        <p data-i18n="ap_install_desc">Mise en place de machines virtuelles : comptes, droits par rôle et outils de développement.</p>
+                        <ul class="tags"><li>Linux</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Installation_Poste.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_InstallationPoste.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <a href="https://woodeo.valentinraillard.fr/">
-                            <img src="img/woodeo.png" alt="">
-                        </a>
+                </article>
+                <article class="project-card">
+                    <div class="project-image"><img src="img/gestion-entreprise.webp" alt="" loading="lazy"></div>
+                    <div class="project-body">
+                        <h3 data-i18n="ap_gestion_title">Création d'entreprise</h3>
+                        <p data-i18n="ap_gestion_desc">Entreprise fictive : identité visuelle, analyses PESTEL et SWOT, organigramme et prévisions.</p>
+                        <ul class="tags"><li data-i18n="tag_management">Gestion</li></ul>
+                        <div class="project-links">
+                            <a href="pdf/LAMAT_Remi_Gestion.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i><span data-i18n="link_report">Rapport</span></a>
+                            <a href="zip/LAMAT_Remi_Gestion_Entreprise.zip" download><i class="fas fa-file-archive"></i><span data-i18n="link_source">Sources</span></a>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-
-
-
-
+        <!-- ========== CONTACT ========== -->
         <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2><span data-i18n="contact_title_prefix">Me </span><span data-i18n="contact_title_span">Contacter</span><span class="bg-text" data-i18n="contact_bg">Contact</span></h2>
+            <div class="main-title">
+                <h2><span data-i18n="contact_title_a">Me</span> <span class="accent" data-i18n="contact_title_b">contacter</span><span class="bg-text">Contact</span></h2>
+            </div>
+            <p class="port-text" data-i18n="contact_p">Une question, une opportunité ? N'hésitez pas à m'écrire, je réponds rapidement.</p>
+            <div class="contact-grid">
+                <a class="contact-card" href="mailto:remi.lamat@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">remi.lamat@gmail.com</span>
+                </a>
+                <a class="contact-card" href="tel:+33624015475">
+                    <i class="fas fa-phone"></i>
+                    <span class="contact-label" data-i18n="contact_phone">Téléphone</span>
+                    <span class="contact-value">+33 6 24 01 54 75</span>
+                </a>
+                <a class="contact-card" href="https://www.linkedin.com/in/r%C3%A9mi-lamat-91556b241/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">Rémi Lamat</span>
+                </a>
+                <a class="contact-card" href="https://github.com/rlamat" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">rlamat</span>
+                </a>
+                <a class="contact-card" href="https://gitlab.com/rlamat" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-gitlab"></i>
+                    <span class="contact-label">GitLab</span>
+                    <span class="contact-value">rlamat</span>
+                </a>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="contact-label" data-i18n="contact_location">Localisation</span>
+                    <span class="contact-value" data-i18n="contact_city">Bordeaux, France</span>
                 </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4 data-i18n="contact_h4">Pour me contacter :</h4>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span><span data-i18n="contact_addr">Adresse ➔ 4 rue Bengaline 33600 Pessac France</span></span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span><span data-i18n="contact_email">Email ➔ remi.lamat@gmail.com</span></span>
-                                </div>
-
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span><span data-i18n="contact_edu">Education ➔ ENSEIRB MATMECA Bordeaux</span></span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-mobile"></i>
-                                    <span><span data-i18n="contact_phone">Téléphone mobile ➔ 06 24 01 54 75</span></span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span><span data-i18n="contact_lang">Languages ➔ Français, anglais et espagnol</span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-stats">
-                            <h4 class="stat-title" id="reseaux"><span data-i18n="networks">Mes réseaux :</span></h4>
-
-                                <div class="contact-icons">
-                                    <div class="contact-icon">
-                                        <a href="https://gitlab.com/rlamat" target="_blank">
-                                            <i class="fab fa-gitlab"></i>
-                                        </a>
-                                    </div>
-
-                                    <div class="contact-icon">
-                                        <a href="https://www.linkedin.com/in/r%C3%A9mi-lamat-91556b241/" target="_blank">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                    </div>
-
-
-                                    <div class="contact-icon">
-                                        <a href="https://github.com/rlamat" target="_blank">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                    </div>
- 
-                                    <div class="contact-icon">
-                                        <a href="https://www.instagram.com/remilamat" target="_blank">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                        </div>
-                    </div>
-                </div>  
             </div>
         </section>
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" >
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="work">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-folder-open"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <div class="lang-btn"><span class="lang-label">FR</span></div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
+    <nav class="controls" aria-label="Navigation">
+        <button type="button" class="control active-btn" data-id="home"><i class="fas fa-home"></i><span class="control-label" data-i18n="nav_home">Accueil</span></button>
+        <button type="button" class="control" data-id="work"><i class="fas fa-briefcase"></i><span class="control-label" data-i18n="nav_work">Expériences</span></button>
+        <button type="button" class="control" data-id="about"><i class="fas fa-user"></i><span class="control-label" data-i18n="nav_about">À propos</span></button>
+        <button type="button" class="control" data-id="portfolio"><i class="fas fa-folder-open"></i><span class="control-label" data-i18n="nav_portfolio">Projets</span></button>
+        <button type="button" class="control" data-id="contact"><i class="fas fa-envelope-open"></i><span class="control-label" data-i18n="nav_contact">Contact</span></button>
+    </nav>
+    <button type="button" class="lang-btn" aria-label="Switch to English"><span class="lang-label">EN</span></button>
+    <button type="button" class="theme-btn" aria-label="Changer de thème"><i class="fas fa-adjust"></i></button>
     <script src="app.js"></script>
 </body>
 </html>
