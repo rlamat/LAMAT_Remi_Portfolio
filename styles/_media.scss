@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 1432px) {
     .container {
-        padding: 7rem 11rem;
+        padding: 5rem 11rem 2rem;
     }
     .main-title h2 .bg-text {
         font-size: 5.5rem;
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 970px) {
     .container {
-        padding: 7rem 6rem;
+        padding: 5rem 6rem 2rem;
     }
     .header-content {
         grid-template-columns: 1fr;
@@ -71,11 +71,10 @@
 
 @media screen and (max-width: 700px) {
     .container {
-        padding: 6rem 1.5rem 8rem !important;
+        padding: 4rem 1.5rem 1rem;
     }
-    header.container {
-        padding: 0 !important;
-    }
+    // Room for the fixed bottom navigation bar
+    body:not(.project-page) { padding-bottom: 70px; }
     .theme-btn,
     .lang-btn {
         top: 1rem;
@@ -101,7 +100,7 @@
             width: 46px;
             height: 46px;
             margin: .6rem .2rem;
-            .control-label { display: none; }
+            .control-label { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; opacity: 1; }
         }
     }
 
@@ -138,7 +137,15 @@
         top: 1rem;
         left: 1rem;
         padding: .6rem 1rem;
-        span { display: none; }
+        // Text hidden visually but kept for screen readers
+        span {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+        }
     }
     .project-columns,
     .contrib-grid,

@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Builds the English pages and deploys the site to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -29,13 +29,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build English pages and icon sprite
+        # Fails the deployment if a translation is missing in i18n/en.json
+        run: node tools/build.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload entire repository (including the generated en/ folder)
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
