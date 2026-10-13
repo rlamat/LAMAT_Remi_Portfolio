@@ -1,0 +1,261 @@
+/* Shared styles for the French and English CVs (rendered to A4 PDF) */
+@page { size: A4; margin: 0; }
+
+:root {
+    --navy: #16213a;
+    --navy-2: #22304f;
+    --green: #1f9d55;
+    --green-light: #e8f6ee;
+    --text: #1f2937;
+    --muted: #5b6472;
+    --line: #e5e7eb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ul { list-style: none; }
+
+html, body {
+    width: 210mm;
+    height: 297mm;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 8.2pt;
+    line-height: 1.4;
+    color: var(--text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 66mm 1fr;
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+}
+
+/* ---------- Sidebar ---------- */
+.side {
+    background: var(--navy);
+    color: #e8ecf4;
+    padding: 9mm 7mm 8mm;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4mm;
+}
+
+.photo {
+    width: 26mm;
+    height: 26mm;
+    margin: 0 auto 1mm;
+    border-radius: 50%;
+    border: 1.2mm solid var(--green);
+    object-fit: cover;
+}
+
+.side h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 1.6mm;
+    margin-bottom: 2.6mm;
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
+}
+
+.contact li {
+    margin-bottom: 1.2mm;
+    font-size: 7.7pt;
+    overflow-wrap: break-word;
+}
+.contact a { color: inherit; text-decoration: none; }
+
+.skill-block { margin-bottom: 2mm; }
+.skill-block h3 {
+    font-size: 7.6pt;
+    font-weight: 600;
+    color: #9fb0cf;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    margin-bottom: 1.2mm;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+.chips li {
+    padding: .3mm 1.8mm;
+    border-radius: 3mm;
+    background: var(--navy-2);
+    font-size: 7.6pt;
+}
+
+.lang li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6mm;
+}
+.lang .lvl { font-size: 7.6pt; color: #9fb0cf; }
+
+.plain li { margin-bottom: 1.3mm; padding-left: 3.2mm; position: relative; }
+.plain li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.5mm;
+    width: 1.3mm;
+    height: 1.3mm;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+
+/* ---------- Main column ---------- */
+.main {
+    padding: 9mm 10mm 7mm 9mm;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 23pt;
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--navy);
+    letter-spacing: -.3px;
+}
+.name span { color: var(--green); }
+
+.role {
+    margin-top: 1.6mm;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--green);
+}
+
+.target {
+    margin-top: 2.2mm;
+    font-size: 8.6pt;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.summary { margin-top: 2.2mm; color: var(--muted); }
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2mm;
+    margin-top: 2.8mm;
+}
+.facts div {
+    text-align: center;
+    padding: 1.8mm 1mm;
+    border: 1px solid var(--line);
+    border-radius: 2mm;
+}
+.facts b {
+    display: block;
+    font-size: 12.5pt;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--navy);
+}
+.facts span { font-size: 7pt; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+
+.section { margin-top: 3mm; }
+.section > h2 {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 1.8mm;
+}
+.section > h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+.entry {
+    position: relative;
+    padding-left: 4.2mm;
+    margin-bottom: 2.1mm;
+    border-left: 1px solid var(--line);
+    margin-left: 3mm;
+}
+.entry::before {
+    content: '';
+    position: absolute;
+    left: -1.25mm;
+    top: 1.3mm;
+    width: 2.5mm;
+    height: 2.5mm;
+    border-radius: 50%;
+    background: #fff;
+    border: .6mm solid var(--green);
+}
+.entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 3mm;
+}
+.entry h3 { font-size: 9.3pt; font-weight: 700; color: var(--navy); }
+.entry .date {
+    flex-shrink: 0;
+    font-size: 7.6pt;
+    font-weight: 600;
+    color: var(--green);
+    white-space: nowrap;
+}
+.entry .org { font-size: 8.3pt; font-weight: 500; color: var(--muted); }
+.entry ul { margin-top: .9mm; }
+.entry li {
+    position: relative;
+    padding-left: 3mm;
+    margin-bottom: .5mm;
+}
+.entry li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+}
+.entry .stack {
+    margin-top: .8mm;
+    font-size: 7.6pt;
+    color: var(--muted);
+}
+.entry .stack b { color: var(--navy); font-weight: 600; }
+
+.qualities { color: #e8ecf4; line-height: 1.6; }
+.qualities span { color: var(--green); margin: 0 1mm; }
+
+/* English CV: monogram instead of a photo (no photo on English-language resumes) */
+.monogram {
+    width: 24mm;
+    height: 24mm;
+    margin: 0 auto 1mm;
+    border-radius: 50%;
+    border: 1.2mm solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* English CV has less text: give the main column a little more air */
+.roomy .main .section { margin-top: 4.2mm; }
+.roomy .main .entry { margin-bottom: 2.7mm; }
+

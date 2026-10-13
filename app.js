@@ -34,8 +34,28 @@
             goTo(link.dataset.goto);
         });
     });
-    window.addEventListener("popstate", () => showSection(location.hash.slice(1)));
-    if (location.hash) showSection(location.hash.slice(1));
+    // Section navigation only exists on the main page (not on project pages)
+    if (controls.length) {
+        window.addEventListener("popstate", () => showSection(location.hash.slice(1)));
+        if (location.hash) showSection(location.hash.slice(1));
+    }
+
+    // --- Screenshot lightbox (project pages) ---
+    const lightbox = document.querySelector(".lightbox");
+    if (lightbox) {
+        const lbImg = lightbox.querySelector("img");
+        document.querySelectorAll(".shot").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const img = btn.querySelector("img");
+                lbImg.src = btn.dataset.full;
+                lbImg.alt = img.alt;
+                lightbox.showModal();
+            });
+        });
+        lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
+        // Click on the backdrop closes it
+        lightbox.addEventListener("click", e => { if (e.target === lightbox) lightbox.close(); });
+    }
 
     // --- Theme toggle (dark/light) ---
     const themeBtn = document.querySelector(".theme-btn");
@@ -60,8 +80,8 @@
         work_title_b: "experience",
         work_bg: "Career",
         work_h4: "My professional path",
-        work_p: "Three years of apprenticeship, first in banking and then in scientific research, plus two internships including one abroad, allowed me to work on production systems, both in agile teams and in environments with high reliability requirements. Alongside this, I am self-employed and co-founded the company Xenalis.",
-        work_fact1_value: "3 years",
+        work_p: "Four years of apprenticeship, first in banking and then in scientific research, plus two internships including one abroad, allowed me to work on production systems, both in agile teams and in environments with high reliability requirements. Alongside this, I am self-employed and co-founded the company Xenalis.",
+        work_fact1_value: "4 years",
         work_fact1_label: "apprenticeship",
         work_fact2_value: "2 internships",
         work_fact2_label: "France · Italy",
@@ -73,9 +93,9 @@
         work_tl1_title: "Software Engineering Apprentice",
         work_tl1_desc: "Modernization of part of the Laser Mégajoule control-command system, a research facility with demanding reliability and software quality requirements.",
         work_tl2_duration: "Summer 2026 · 3 months",
-        work_tl2_title: "Intern",
-        work_tl2_org: " · Terranova da Sibari, Italy",
-        work_tl2_desc: "Three-month internship abroad, in southern Italy.",
+        work_tl2_title: "Full-stack Developer Intern",
+        work_tl2_org: " · Extramus, Terranova da Sibari (Italy)",
+        work_tl2_desc: "Built an HR platform managing Erasmus+ interns (recruitment, housing, attendance, payments) in a team of four developers. The application is live.",
         work_tl3_duration: "Aug 2023 – Jul 2024",
         work_tl3_title: "Software Developer Apprentice",
         work_tl3_desc: "Back-end developer in the Tool team of DSIBA (Banking &amp; Insurance IT Department). Built internal PHP applications; evolution and maintenance of three applications using agile practices (daily stand-ups, sprint reviews).",
@@ -86,7 +106,7 @@
         entre1_duration: "Ongoing",
         entre1_title: "Co-founder &amp; partner",
         entre1_org: " · Xenalis",
-        entre1_desc: "Together with my brother, I co-founded Xenalis, a company building a shop and information platform for Pokémon products. Its core mission: fighting scalping (bulk buying products to resell them at inflated prices) so that collectors and players can buy at fair prices.",
+        entre1_desc: "Co-founded Xenalis, a company building a shop and information platform for Pokémon products. Its core mission: fighting scalping (bulk buying products to resell them at inflated prices) so that collectors and players can buy at fair prices.",
         tag_ecommerce: "E-commerce",
         tag_creation: "Company creation",
         entre2_duration: "Ongoing",
@@ -98,7 +118,7 @@
         about_title_b: "me",
         about_bg: "Profile",
         about_h4: "Who am I?",
-        about_p: "Passionate about software development, versatile and a good listener, I am used to working in teams and on projects. Outside class, I coach young tennis players and chair Chesseirb, the ENSEIRB-MATMECA chess club I co-founded.",
+        about_p: "Passionate about software development, versatile and a good listener, I am used to working in teams and on projects. Outside class, I chair Chesseirb, the ENSEIRB-MATMECA chess club I co-founded, after six years coaching young tennis players.",
         about_fact1: "Engineering degree",
         about_fact2_value: "3 languages",
         about_fact2_label: "FR · EN (B2) · ES (B1)",
@@ -118,7 +138,7 @@
         engage1_duration: "Student association",
         engage1_title: "President &amp; co-founder",
         engage1_desc: "Founded and run the ENSEIRB-MATMECA chess club: event organization, community management and website development.",
-        engage2_duration: "Since 2019",
+        engage2_duration: "2019 – 2025",
         engage2_title: "Tennis coach",
         engage2_desc: "Certified instructor (2020). Coaching young players aged 6 to 18, planning sessions and volunteering at club events.",
 
@@ -140,25 +160,25 @@
 
         portfolio_title_a: "My",
         portfolio_title_b: "projects",
-        portfolio_p: "A selection of personal projects, followed by academic projects from my Bachelor's degree.",
+        portfolio_p: "My internship project, a selection of personal projects and academic projects from my Bachelor's degree.",
         featured_title: "Personal projects",
         older_title: "Academic projects (Bachelor's)",
         link_site: "Website",
         link_report: "Report",
         link_source: "Source",
 
-        fp1_title: "Crypto Ascend — trading bot",
+        fp1_title: "Crypto Ascend",
         fp1_desc: "Bot and web interface to automate cryptocurrency trading strategies.",
-        fp2_title: "Chesseirb — club website",
+        fp2_title: "Chesseirb",
         fp2_desc: "Website of the ENSEIRB-MATMECA chess club: club presentation, events and practical information.",
-        fp3_title: "LG Stats — Werewolf UHC",
+        fp3_title: "LG Stats",
         fp3_desc: "Minecraft match statistics dashboard and player performance tracking.",
-        fp4_title: "WrapperAI — posts from a video",
+        fp4_title: "WrapperAI",
         fp4_desc: "Tool that automatically generates social media posts from a video.",
 
         ap_rsa_title: "RSA encryption",
         ap_rsa_desc: "Simulation of an encrypted message exchange using RSA.",
-        ap_lowatem_title: "Lowatem — game AI",
+        ap_lowatem_title: "Lowatem",
         ap_lowatem_desc: "Implemented a board game's rules with unit tests, then designed and optimized an AI player.",
         ap_woodeo_desc: "Web application to track TV series and anime, built as a team.",
         ap_pong_desc: "Pong remake: menus, pause, scoring and multi-ball mode.",
@@ -185,7 +205,55 @@
         nav_work: "Experience",
         nav_about: "About",
         nav_portfolio: "Projects",
-        nav_contact: "Contact"
+        nav_contact: "Contact",
+
+        // Index: internship project card + timeline link
+        intern_title: "Internship project",
+        ip_title: "Extramus",
+        ip_desc: "Web application covering the whole Erasmus+ intern journey: application and screening test, housing, attendance, rent payments and offboarding.",
+        link_project: "View project",
+
+        // Project page: Extramus
+        pp_back: "Back to projects",
+        pp_kicker: "Internship project · Summer 2026",
+        pp_title: "HR platform for intern management",
+        pp_lead: "Web application managing the whole journey of the Erasmus+ interns hosted by Extramus: application and screening test, acceptance, housing, daily attendance, rent payments, communication and offboarding.",
+        pp_badge_place: "Terranova da Sibari, Italy",
+        pp_badge_role: "Full-stack developer (intern)",
+        pp_badge_team: "Team of 4 developers",
+        pp_fact1: "lines of code added",
+        pp_fact2_value: "6 modules",
+        pp_fact2: "designed and delivered",
+        pp_fact3: "no framework",
+        pp_fact4_value: "Live",
+        pp_fact4: "used by the HR team",
+        pp_context_title: "Context",
+        pp_problem_title: "The need",
+        pp_problem: "Every year Extramus hosts many European interns and houses them in its own apartments. Recruitment, room allocation, attendance tracking and rent were handled manually, with spreadsheets and emails.",
+        pp_solution_title: "The solution",
+        pp_solution: "A single platform with a public area for candidates, a back office for HR (super-admin and department admin roles) and a portal for interns. Emails, acceptance letters and PDF certificates are generated automatically.",
+        pp_contrib_title: "My contributions",
+        pp_c1_title: "Housing",
+        pp_c1: "Houses, single or double rooms, automatic allocation on acceptance, moving and swapping occupants, occupancy calendar and dated room-change reservations.",
+        pp_c2_title: "Attendance",
+        pp_c2: "Daily register with day, week and month views: typed absences (sick, leave, late…), daily notes, per-intern statistics and an \"absent by default\" mode.",
+        pp_c3_title: "Payments",
+        pp_c3: "Rent and bills prorated by stay period and room type, tracking of paid and outstanding amounts, invoices aggregated per person.",
+        pp_c4_title: "Intern portal",
+        pp_c4: "Dedicated intern area, targeted announcements with read receipts, and Google Workspace account creation and closure on arrival and departure.",
+        pp_c5_title: "Emails &amp; settings",
+        pp_c5: "SMTP configuration from the UI, editable email templates, automatic reminders before arrival and departure, and staff account management.",
+        pp_c6_title: "Quality",
+        pp_c6: "Responsive interface, documentation (README, built-in HR guide) and the first version of an automated test bench replaying functional scenarios without side effects.",
+        pp_gallery_title: "App preview",
+        pp_gallery_note: "Screenshots taken on a local instance with fictitious test data.",
+        pp_s1: "Dashboard: upcoming arrivals and departures, recruitment statistics.",
+        pp_s2: "Housing calendar: occupancy of every room, week by week.",
+        pp_s3: "Daily attendance register with absence and leave counters.",
+        pp_s4: "Payment tracking: billed, paid and outstanding amounts per intern.",
+        pp_s5: "Intern list, filterable by presence, department, house or country.",
+        pp_s6: "Candidates: test scores, one-click acceptance or refusal with automatic emails.",
+        pp_stack_title: "Tech stack"
     };
 
     const meta = {
@@ -195,7 +263,7 @@
             themeAria: "Changer de thème"
         },
         en: {
-            title: "Rémi Lamat — Computer Science Engineering Student",
+            title: document.documentElement.dataset.titleEn || "Rémi Lamat | Computer Science Engineering Student",
             langBtn: { label: "FR", aria: "Passer en français" },
             themeAria: "Toggle theme"
         }

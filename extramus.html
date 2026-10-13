@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr" data-title-en="Extramus | Internship project · Rémi Lamat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extramus | Projet de stage · Rémi Lamat</title>
+    <meta name="description" content="Plateforme web de recrutement et de gestion des stagiaires développée pendant mon stage chez Extramus (Terranova da Sibari, Italie).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="main-content project-page">
+    <a href="index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i><span data-i18n="pp_back">Retour aux projets</span></a>
+    <button type="button" class="lang-btn" aria-label="Switch to English"><span class="lang-label">EN</span></button>
+    <button type="button" class="theme-btn" aria-label="Changer de thème"><i class="fas fa-adjust"></i></button>
+
+    <main class="project-main">
+        <!-- ========== EN-TÊTE ========== -->
+        <header class="project-hero">
+            <p class="project-kicker" data-i18n="pp_kicker">Projet de stage · Été 2026</p>
+            <h1>Extramus <span data-i18n="pp_title">Plateforme RH de gestion des stagiaires</span></h1>
+            <p class="project-lead" data-i18n="pp_lead">Application web qui gère tout le parcours des stagiaires Erasmus+ accueillis par Extramus&nbsp;: candidature et test de présélection, acceptation, hébergement, présence quotidienne, paiements des loyers, communication et départ.</p>
+            <ul class="header-badges">
+                <li><i class="fas fa-map-marker-alt"></i><span data-i18n="pp_badge_place">Terranova da Sibari, Italie</span></li>
+                <li><i class="fas fa-user-tie"></i><span data-i18n="pp_badge_role">Développeur full-stack (stagiaire)</span></li>
+                <li><i class="fas fa-users"></i><span data-i18n="pp_badge_team">Équipe de 4 développeurs</span></li>
+            </ul>
+        </header>
+
+        <!-- ========== CHIFFRES ========== -->
+        <section class="project-section">
+            <div class="project-facts">
+                <div class="about-item">
+                    <p class="large-text">24 000+</p>
+                    <p class="small-text" data-i18n="pp_fact1">lignes de code ajoutées</p>
+                </div>
+                <div class="about-item">
+                    <p class="large-text" data-i18n="pp_fact2_value">6 modules</p>
+                    <p class="small-text" data-i18n="pp_fact2">conçus et livrés</p>
+                </div>
+                <div class="about-item">
+                    <p class="large-text">PHP · JS</p>
+                    <p class="small-text" data-i18n="pp_fact3">sans framework</p>
+                </div>
+                <div class="about-item">
+                    <p class="large-text" data-i18n="pp_fact4_value">En prod</p>
+                    <p class="small-text" data-i18n="pp_fact4">utilisée par l'équipe RH</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTEXTE ========== -->
+        <section class="project-section">
+            <h2 class="project-h2" data-i18n="pp_context_title">Contexte</h2>
+            <div class="project-columns">
+                <div>
+                    <h3 data-i18n="pp_problem_title">Le besoin</h3>
+                    <p data-i18n="pp_problem">Extramus accueille chaque année de nombreux stagiaires européens et les loge dans ses propres appartements. Le recrutement, l'attribution des chambres, le suivi de présence et les loyers étaient gérés à la main, sur des tableurs et par email.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="pp_solution_title">La solution</h3>
+                    <p data-i18n="pp_solution">Une plateforme unique avec un espace public pour les candidats, un back-office pour les RH (rôles super-admin et admin de département) et un portail pour les stagiaires. Les emails, lettres d'acceptation et certificats PDF sont générés automatiquement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTRIBUTIONS ========== -->
+        <section class="project-section">
+            <h2 class="project-h2" data-i18n="pp_contrib_title">Mes contributions</h2>
+            <div class="contrib-grid">
+                <div class="contrib-card">
+                    <i class="fas fa-home"></i>
+                    <h3 data-i18n="pp_c1_title">Hébergement</h3>
+                    <p data-i18n="pp_c1">Maisons, chambres simples ou doubles, attribution automatique à l'acceptation, déplacement et échange d'occupants, calendrier d'occupation et réservation datée de changements de chambre.</p>
+                </div>
+                <div class="contrib-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3 data-i18n="pp_c2_title">Présence</h3>
+                    <p data-i18n="pp_c2">Registre quotidien en vues jour, semaine et mois : absences typées (maladie, congé, retard…), notes par jour, statistiques par stagiaire et mode « absent par défaut ».</p>
+                </div>
+                <div class="contrib-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3 data-i18n="pp_c3_title">Paiements</h3>
+                    <p data-i18n="pp_c3">Calcul des loyers et charges au prorata des périodes et du type de chambre, suivi du payé et du restant dû, factures agrégées par personne.</p>
+                </div>
+                <div class="contrib-card">
+                    <i class="fas fa-id-badge"></i>
+                    <h3 data-i18n="pp_c4_title">Portail stagiaire</h3>
+                    <p data-i18n="pp_c4">Espace dédié aux stagiaires, annonces ciblées avec accusé de lecture, et création ou fermeture des comptes Google Workspace à l'arrivée et au départ.</p>
+                </div>
+                <div class="contrib-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3 data-i18n="pp_c5_title">Emails &amp; réglages</h3>
+                    <p data-i18n="pp_c5">Configuration SMTP depuis l'interface, modèles d'emails éditables, rappels automatiques avant arrivée et départ, et gestion des comptes du staff.</p>
+                </div>
+                <div class="contrib-card">
+                    <i class="fas fa-vial"></i>
+                    <h3 data-i18n="pp_c6_title">Qualité</h3>
+                    <p data-i18n="pp_c6">Interface responsive, documentation (README, guide RH intégré) et première version d'un banc de tests automatisé qui rejoue les scénarios fonctionnels sans effet de bord.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== GALERIE ========== -->
+        <section class="project-section">
+            <h2 class="project-h2" data-i18n="pp_gallery_title">Aperçu de l'application</h2>
+            <p class="gallery-note"><i class="fas fa-info-circle"></i><span data-i18n="pp_gallery_note">Captures réalisées sur une instance locale avec des données de test fictives.</span></p>
+            <div class="gallery">
+                <figure>
+                    <button type="button" class="shot" data-full="img/extramus/dashboard.webp"><img src="img/extramus/dashboard.webp" alt="Tableau de bord" loading="lazy" width="1440" height="900"></button>
+                    <figcaption data-i18n="pp_s1">Tableau de bord : arrivées et départs à venir, statistiques de recrutement.</figcaption>
+                </figure>
+                <figure>
+                    <button type="button" class="shot" data-full="img/extramus/calendar.webp"><img src="img/extramus/calendar.webp" alt="Calendrier d'hébergement" loading="lazy" width="1440" height="900"></button>
+                    <figcaption data-i18n="pp_s2">Calendrier d'hébergement : taux d'occupation de chaque chambre semaine par semaine.</figcaption>
+                </figure>
+                <figure>
+                    <button type="button" class="shot" data-full="img/extramus/presence.webp"><img src="img/extramus/presence.webp" alt="Registre de présence" loading="lazy" width="1440" height="900"></button>
+                    <figcaption data-i18n="pp_s3">Registre de présence quotidien avec compteurs d'absences et de congés.</figcaption>
+                </figure>
+                <figure>
+                    <button type="button" class="shot" data-full="img/extramus/payments.webp"><img src="img/extramus/payments.webp" alt="Suivi des paiements" loading="lazy" width="1440" height="900"></button>
+                    <figcaption data-i18n="pp_s4">Suivi des paiements : montant facturé, payé et restant dû par stagiaire.</figcaption>
+                </figure>
+                <figure>
+                    <button type="button" class="shot" data-full="img/extramus/interns.webp"><img src="img/extramus/interns.webp" alt="Liste des stagiaires" loading="lazy" width="1440" height="900"></button>
+                    <figcaption data-i18n="pp_s5">Liste des stagiaires, filtrable par présence, département, logement ou pays.</figcaption>
+                </figure>
+                <figure>
+                    <button type="button" class="shot" data-full="img/extramus/candidates.webp"><img src="img/extramus/candidates.webp" alt="Candidats" loading="lazy" width="1440" height="900"></button>
+                    <figcaption data-i18n="pp_s6">Candidats : scores au test, acceptation ou refus en un clic, avec emails automatiques.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ========== STACK ========== -->
+        <section class="project-section">
+            <h2 class="project-h2" data-i18n="pp_stack_title">Stack technique</h2>
+            <ul class="chips centered">
+                <li>PHP 8.2</li><li>MySQL / MariaDB</li><li>JavaScript (vanilla)</li><li>HTML / CSS</li>
+                <li>PHPMailer (SMTP)</li><li>TCPDF</li><li>Google Workspace API</li><li>Git / GitHub</li><li>cPanel</li>
+            </ul>
+        </section>
+
+        <div class="project-footer">
+            <a href="index.html#portfolio" class="main-btn">
+                <span class="btn-text" data-i18n="pp_back">Retour aux projets</span>
+                <span class="btn-icon"><i class="fas fa-arrow-left"></i></span>
+            </a>
+        </div>
+    </main>
+
+    <dialog class="lightbox" aria-label="Capture agrandie">
+        <button type="button" class="lightbox-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <img src="" alt="">
+    </dialog>
+
+    <script src="app.js"></script>
+</body>
+</html>

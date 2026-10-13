@@ -121,3 +121,26 @@
         .bg-text { font-size: 2.8rem; }
     }
 }
+
+// Project page & wide project card
+@media screen and (max-width: 1070px) {
+    .project-card.project-wide {
+        flex-direction: column;
+        .project-image img { min-height: 0; height: 240px; }
+    }
+    .contrib-grid { grid-template-columns: repeat(2, 1fr); }
+    .project-facts { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 700px) {
+    .project-main { padding: 6rem 1rem 4rem; }
+    .back-btn {
+        top: 1rem;
+        left: 1rem;
+        padding: .6rem 1rem;
+        span { display: none; }
+    }
+    .project-columns,
+    .contrib-grid,
+    .gallery { grid-template-columns: 1fr; }
+}
